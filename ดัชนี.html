@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ร้านค้าออนไลน์</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛒 ร้านค้าออนไลน์</h1>
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="login.html">สมาชิก</a>
+        <a href="cart.html">ตะกร้า</a>
+    </nav>
+</header>
+
+<section class="products">
+    <div class="product">
+        <h3>เสื้อยืด</h3>
+        <p>ราคา 250 บาท</p>
+        <button onclick="addToCart('เสื้อยืด',250)">เพิ่มลงตะกร้า</button>
+    </div>
+
+    <div class="product">
+        <h3>รองเท้า</h3>
+        <p>ราคา 1,200 บาท</p>
+        <button onclick="addToCart('รองเท้า',1200)">เพิ่มลงตะกร้า</button>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบสมาชิก</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>เข้าสู่ระบบสมาชิก</h2>
+
+<form onsubmit="login(event)">
+    <input type="text" placeholder="ชื่อผู้ใช้" required>
+    <input type="password" placeholder="รหัสผ่าน" required>
+    <button type="submit">เข้าสู่ระบบ</button>
+</form>
+
+<p id="result"></p>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ตะกร้าสินค้า</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2> ตะกร้าสินค้า</h2>
+
+<ul id="cartList"></ul>
+<p id="total"></p>
+
+<a href="payment.html">ไปหน้าชำระเงิน</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ชำระเงิน</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>💳 ชำระเงิน</h2>
+
+<form onsubmit="pay(event)">
+    <label>
+        <input type="radio" name="pay" required> โอนผ่านธนาคาร
+    </label><br>
+
+    <label>
+        <input type="radio" name="pay"> เก็บเงินปลายทาง
+    </label><br><br>
+
+    <button type="submit">ยืนยันการชำระเงิน</button>
+</form>
+
+<p id="payResult"></p>
+
+<script src="js/script.js"></script>
+</body>
+</html>
