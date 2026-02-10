@@ -2,103 +2,47 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>ร้านค้าออนไลน์</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingPong Pro Shop | อุปกรณ์ปิงปองครบวงจร</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <h1>🛒 ร้านค้าออนไลน์</h1>
-    <nav>
-        <a href="index.html">หน้าหลัก</a>
-        <a href="login.html">สมาชิก</a>
-        <a href="cart.html">ตะกร้า</a>
-    </nav>
-</header>
+    <header>
+        <div class="logo">🏓 PINGPONG <span>PRO</span></div>
+        <nav>
+            <a href="#">หน้าหลัก</a>
+            <a href="#">สินค้า</a>
+            <a href="login.html">เข้าสู่ระบบ/สมัครสมาชิก</a>
+            <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> ตะกร้า (0)</a>
+        </nav>
+    </header>
 
-<section class="products">
-    <div class="product">
-        <h3>เสื้อยืด</h3>
-        <p>ราคา 250 บาท</p>
-        <button onclick="addToCart('เสื้อยืด',250)">เพิ่มลงตะกร้า</button>
-    </div>
+    <section class="hero">
+        <h1>ยกระดับเกมของคุณด้วยอุปกรณ์มาตรฐานสากล</h1>
+        <p>ไม้ปิงปอง ยาง และอุปกรณ์แข่งขัน ราคาตามตลาดโลก</p>
+        <button class="cta-btn">ช้อปเลย</button>
+    </section>
 
-    <div class="product">
-        <h3>รองเท้า</h3>
-        <p>ราคา 1,200 บาท</p>
-        <button onclick="addToCart('รองเท้า',1200)">เพิ่มลงตะกร้า</button>
-    </div>
-</section>
+    <section class="products">
+        <h2>สินค้าแนะนำ</h2>
+        <div class="grid">
+            <div class="product-card">
+                <div class="badge">Hot</div>
+                <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=300&q=80" alt="ไม้ปิงปอง">
+                <h3>ไม้ปิงปอง Carbon X3</h3>
+                <p class="price">฿2,450</p>
+                <button class="add-cart">เพิ่มลงตะกร้า</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1611252041553-b387adce292d?auto=format&fit=crop&w=300&q=80" alt="ยางปิงปอง">
+                <h3>ยางปิงปอง Speed Master</h3>
+                <p class="price">฿1,200</p>
+                <button class="add-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+    </section>
 
-<script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <title>ระบบสมาชิก</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<h2>เข้าสู่ระบบสมาชิก</h2>
-
-<form onsubmit="login(event)">
-    <input type="text" placeholder="ชื่อผู้ใช้" required>
-    <input type="password" placeholder="รหัสผ่าน" required>
-    <button type="submit">เข้าสู่ระบบ</button>
-</form>
-
-<p id="result"></p>
-
-<script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <title>ตะกร้าสินค้า</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<h2> ตะกร้าสินค้า</h2>
-
-<ul id="cartList"></ul>
-<p id="total"></p>
-
-<a href="payment.html">ไปหน้าชำระเงิน</a>
-
-<script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <title>ชำระเงิน</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<h2>💳 ชำระเงิน</h2>
-
-<form onsubmit="pay(event)">
-    <label>
-        <input type="radio" name="pay" required> โอนผ่านธนาคาร
-    </label><br>
-
-    <label>
-        <input type="radio" name="pay"> เก็บเงินปลายทาง
-    </label><br><br>
-
-    <button type="submit">ยืนยันการชำระเงิน</button>
-</form>
-
-<p id="payResult"></p>
-
-<script src="js/script.js"></script>
 </body>
 </html>
